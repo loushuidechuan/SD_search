@@ -1,2 +1,2 @@
-# 瑞克老爷
-![Alt text](image-4.png#pic_center)
+<h1 align=center>瑞克老爷</h1>
+<div align=center><img src="./img/image-4.png"></div>
