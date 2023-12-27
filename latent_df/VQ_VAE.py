@@ -229,7 +229,7 @@ class Celeb(Dataset):
             transforms.ToTensor()
         ])
         return pipeline(img)
-def get_dataloader(root='/home/ubuntu/images/train2017',**kwargs):
+def get_dataloader(root='',**kwargs):
     dataset=Celeb(root,**kwargs)
 
     return DataLoader(dataset=dataset,batch_size=1,num_workers=2)
@@ -238,4 +238,4 @@ def loss_vq(x,y,diff):
     recos=torch.nn.functional.mse_loss(y,x)
     return recos+diff
 if __name__=='__main__':
-    model=VQ_VAE(ch=32,out_ch=3,num_res_blocks=2,in_channels=3,dropout=1.,z_channels=256,device="cpu")
+    model=VQ_VAE(ch=32,out_ch=3,num_res_blocks=2,in_channels=3,dropout=0.,z_channels=256,device="cpu")
